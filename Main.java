@@ -22,5 +22,8 @@ public class Main {
         System.out.println(Algorithm.sumOfDigits(10000000));
         System.out.println(Algorithm.sumOfDigits(99999));
         //largest power of two less than parameter
+        System.out.println(Algorithm.greatestPowerOfTwo(800);
+        System.out.println(Algorithm.greatestPowerOfTwo(1024);
+        System.out.println(Algorithm.greatestPowerOfTwo(3);
     }
 }
