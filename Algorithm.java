@@ -43,4 +43,13 @@ public class Algorithm {
         int power = (int)(Math.log(n)/Math.log(2));
         return (int)(Math.pow(2, power));
     }
+
+    public static boolean isSubstring(String str, String sub){
+        for (int i = 0; i < sub.length(); i ++) {
+            if (str.substring(i, str.length()).equals(sub)) {
+                return true;
+            }
+        }
+        return false;
+    }
 }

@@ -22,8 +22,11 @@ public class Main {
         System.out.println(Algorithm.sumOfDigits(10000000));
         System.out.println(Algorithm.sumOfDigits(99999));
         //largest power of two less than parameter
-        System.out.println(Algorithm.greatestPowerOfTwo(800);
-        System.out.println(Algorithm.greatestPowerOfTwo(1024);
-        System.out.println(Algorithm.greatestPowerOfTwo(3);
+        System.out.println(Algorithm.greatestPowerOfTwo(800));
+        System.out.println(Algorithm.greatestPowerOfTwo(1024));
+        System.out.println(Algorithm.greatestPowerOfTwo(3));
+        //is the second string a substring
+        System.out.println(Algorithm.isSubstring("Hello World", "World"));
+        System.out.println(Algorithm.isSubstring("lorem ipsum", "Ipsum"));
     }
 }
