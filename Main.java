@@ -28,5 +28,18 @@ public class Main {
         //is the second string a substring
         System.out.println(Algorithm.isSubstring("Hello World", "World"));
         System.out.println(Algorithm.isSubstring("lorem ipsum", "Ipsum"));
+        System.out.println(Algorithm.isSubstring("20", "2"));
+        //reversing strings
+        System.out.println(Algorithm.reverse("gohangasalami"));
+        System.out.println(Algorithm.reverse("jiejfkdskfdkv"));
+        System.out.println(Algorithm.reverse("23"));
+        //check if palindrome
+        System.out.println(Algorithm.isPalindrome("amanaplanacanalpanama"));
+        System.out.println(Algorithm.isPalindrome("racecar"));
+        System.out.println(Algorithm.isPalindrome("hello"));
+        //number of times in string
+        System.out.println(Algorithm.numberOfOccurences("Mississippi", "si"));
+        System.out.println(Algorithm.numberOfOccurences("Hello world", "o"));
+        System.out.println(Algorithm.numberOfOccurences("w", "why will we walk"));
     }
 }
