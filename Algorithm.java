@@ -52,4 +52,34 @@ public class Algorithm {
         }
         return false;
     }
+
+    public static void printArray(int[] array){
+        for (int element : array){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
+    public static void swapElements(int[] array, int index1, int index2){
+        int temp = array[index1];
+        array[index1] = array[index2];
+        array[index2] = temp;
+    }
+
+    /* Precondition: array has at least one element */
+    public static int max(int[] array){
+        int max = array[0];
+        for (int element : array){
+            if (element > max) max = element;
+        }
+        return max;
+    }
+
+    public static int min(int[] array){
+        int min = array[0];
+        for (int element : array){
+            if (element > max) max = element;
+        }
+        return max;
+    }
 }
