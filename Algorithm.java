@@ -53,6 +53,27 @@ public class Algorithm {
         return false;
     }
 
+    public static String reverse(String str){
+        String newStr = "";
+        for (int i = 0; i < str.length(); i ++){
+            newStr = str.substring(i, i+1) + newStr;
+        }
+        return newStr;
+    }
+
+    public static boolean isPalindrome(String str){
+        if(str.equals(reverse(str))) return true;
+        return false;
+    }
+
+    public static int numberOfOccurences(String phrase, String sub){
+        int count = 0;
+        for(int i = 0; i <= phrase.length() - sub.length(); i ++){
+            if(phrase.substring(i, i + sub.length()).equals(sub)) count ++;
+        }
+        return count;
+    }
+
     public static void printArray(int[] array){
         for (int element : array){
             System.out.print(element + " ");
@@ -78,8 +99,24 @@ public class Algorithm {
     public static int min(int[] array){
         int min = array[0];
         for (int element : array){
-            if (element > max) max = element;
+            if (element < min) min = element;
         }
-        return max;
+        return min;
+    }
+
+    public static String shortestString(String[] array){
+        String shortest = array[0];
+        for (String element : array){
+            if (element.length() < shortest.length()) shortest = element;
+        }
+        return shortest;
+    }
+
+    public static String longestString(String[] array){
+        String longest = array[0];
+        for (String element : array){
+            if (element.length() > longest.length()) longest = element;
+        }
+        return longest;
     }
 }

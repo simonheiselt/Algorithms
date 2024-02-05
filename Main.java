@@ -41,5 +41,8 @@ public class Main {
         System.out.println(Algorithm.numberOfOccurences("Mississippi", "si"));
         System.out.println(Algorithm.numberOfOccurences("Hello world", "o"));
         System.out.println(Algorithm.numberOfOccurences("w", "why will we walk"));
+        //printing an array of ints
+        int[] intArray = {3, 7, 2, 3, 65, -6}
+        Algorithm.printArray(intArray);
     }
 }
