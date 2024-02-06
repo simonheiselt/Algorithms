@@ -42,7 +42,40 @@ public class Main {
         System.out.println(Algorithm.numberOfOccurences("Hello world", "o"));
         System.out.println(Algorithm.numberOfOccurences("w", "why will we walk"));
         //printing an array of ints
-        int[] intArray = {3, 7, 2, 3, 65, -6}
-        Algorithm.printArray(intArray);
+        int[] intArray1 = {1, 2, 3};
+        Algorithm.printArray(intArray1);
+        Algorithm.printArray(new int[5]);
+        Algorithm.printArray(new int[0]);
+        //Swapping elements in array
+        Algorithm.swapElements(intArray1, 0, 2);
+        Algorithm.printArray(intArray1);
+        int[] intArray2 = {1, 223, 432, 4, 3, 77};
+        Algorithm.swapElements(intArray2, 3, 4);
+        Algorithm.printArray(intArray2);
+        Algorithm.swapElements(intArray2, 2, intArray2.length-1);
+        Algorithm.printArray(intArray2);
+        //Returning maximum of array
+        int[] intArray3 = {0};
+        System.out.println(Algorithm.max(intArray3));
+        int[] intArray4 = {-4, -36, 4, 0};
+        System.out.println(Algorithm.max(intArray4));
+        int[] intArray5 = {8, 7, 6, 5, 4};
+        System.out.println(Algorithm.max(intArray5));
+        //Returning minimum of array
+        System.out.println(Algorithm.min(intArray3));
+        System.out.println(Algorithm.min(intArray4));
+        System.out.println(Algorithm.min(intArray5));
+        //Returning shortest String in array
+        String[] stringArray1 = {"Hello,", "world", "!"};
+        String[] stringArray2 = {"lorem", "ipsum", "dolor", "sit", "amet", "consectetur"};
+        String[] stringArray3 = {"supercalifragilisticexpialidocious", "antidisestablishmentarianism", "pneumonoultramicroscopicsilicovolcanoconiosis"};
+        System.out.println(Algorithm.shortestString(stringArray1));
+        System.out.println(Algorithm.shortestString(stringArray2));
+        System.out.println(Algorithm.shortestString(stringArray3));
+        //finding longest string
+        System.out.println(Algorithm.longestString(stringArray1));
+        System.out.println(Algorithm.longestString(stringArray2));
+        System.out.println(Algorithm.longestString(stringArray3));
+
     }
 }

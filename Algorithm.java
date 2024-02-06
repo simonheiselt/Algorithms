@@ -46,7 +46,7 @@ public class Algorithm {
 
     public static boolean isSubstring(String str, String sub){
         for (int i = 0; i < sub.length(); i ++) {
-            if (str.substring(i, str.length()).equals(sub)) {
+            if (str.substring(i).equals(sub)) {
                 return true;
             }
         }
@@ -118,5 +118,18 @@ public class Algorithm {
             if (element.length() > longest.length()) longest = element;
         }
         return longest;
+    }
+
+    public static int largestDifference(int[] array1, int[] array2){
+        int size = 0;
+        if(array1.length > array2.length) size = array2.length;
+        else size = array1.length;
+        int difference = 0;
+        for (int i = 0; i < size; i ++){
+            if (Math.abs(array1[i]-array2[i]) > difference){
+                difference = Math.abs(array1[i]-array2[i];
+            }
+        }
+        return difference;
     }
 }
