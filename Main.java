@@ -76,6 +76,18 @@ public class Main {
         System.out.println(Algorithm.longestString(stringArray1));
         System.out.println(Algorithm.longestString(stringArray2));
         System.out.println(Algorithm.longestString(stringArray3));
-
+        //finding largest difference
+        int[] intArray6 = {2, 3, 4};
+        int[] intArray7 = {-1, -2, -3};
+        int[] intArray8 = {0, 123};
+        System.out.println(Algorithm.largestDifference(intArray6, intArray7));
+        System.out.println(Algorithm.largestDifference(intArray6, intArray8));
+        System.out.println(Algorithm.largestDifference(intArray8, intArray7));
+        //averaging
+        System.out.println(Algorithm.average(new double[4]));
+        double[] doubleArray1 = {2.0, 3.0, 4.0, 5.0};
+        System.out.println(Algorithm.average(doubleArray1));
+        double[] doubleArray2 = {2.0, 3.0, 4.0, 5234.0};
+        System.out.println(Algorithm.average(doubleArray2));
     }
 }

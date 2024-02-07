@@ -127,9 +127,20 @@ public class Algorithm {
         int difference = 0;
         for (int i = 0; i < size; i ++){
             if (Math.abs(array1[i]-array2[i]) > difference){
-                difference = Math.abs(array1[i]-array2[i];
+                difference = Math.abs(array1[i]-array2[i]);
             }
         }
         return difference;
+    }
+
+    public static double average(double[] array){
+        double sum = 0;
+        for (double element : array) sum += element;
+        sum /= array.length;
+        return sum;
+    }
+
+    public static void reverse(int[] array){
+
     }
 }
