@@ -89,5 +89,38 @@ public class Main {
         System.out.println(Algorithm.average(doubleArray1));
         double[] doubleArray2 = {2.0, 3.0, 4.0, 5234.0};
         System.out.println(Algorithm.average(doubleArray2));
+        //reversing
+        Algorithm.printArray(intArray1);
+        Algorithm.printArray(intArray2);
+        Algorithm.printArray(intArray3);
+        Algorithm.printArray(Algorithm.reverse(intArray1));
+        Algorithm.printArray(Algorithm.reverse(intArray2));
+        Algorithm.printArray(Algorithm.reverse(intArray3));
+
+        int[] intArray9 = {1, 2, 3, 3, 4};
+        System.out.println(Algorithm.hasConsecutiveDuplicate(intArray9));
+        System.out.println(Algorithm.hasConsecutiveDuplicate(intArray1));
+        System.out.println(Algorithm.hasConsecutiveDuplicate(intArray3));
+        int[] intArray10 = {1, 0, -1};
+        System.out.println(Algorithm.firstNegative(intArray10));
+        System.out.println(Algorithm.firstNegative(intArray9));
+        System.out.println(Algorithm.firstNegative(intArray7));
+        int[] array11 = {1, 2, 3, 2};
+        System.out.println(Algorithm.hasDuplicates(array11));
+        System.out.println(Algorithm.hasDuplicates(intArray9));
+        System.out.println(Algorithm.hasDuplicates(intArray1));
+        int[] array12 = {1, 2, 1, 1, 1};
+        System.out.println(Algorithm.longestStreak(array12, 1));
+        System.out.println(Algorithm.longestStreak(intArray9, 3));
+        System.out.println(Algorithm.longestStreak(intArray3, 2));
+        String[] stringArray4 = {"zebra", "alpha"};
+        System.out.println(Algorithm.lastAlphabetically(stringArray4));
+        System.out.println(Algorithm.lastAlphabetically(stringArray2));
+        System.out.println(Algorithm.lastAlphabetically(stringArray4));
+        int[] intArray13 = {1, 2};
+        int[] intArray14 = {3, 4};
+        System.out.println(Algorithm.hasIdenticalValues(intArray13, intArray14));
+        System.out.println(Algorithm.hasIdenticalValues(intArray9, intArray1));
+        System.out.println(Algorithm.hasIdenticalValues(intArray3, intArray7));
     }
 }
