@@ -140,7 +140,69 @@ public class Algorithm {
         return sum;
     }
 
-    public static void reverse(int[] array){
+    public static int[] reverse(int[] array){
+        for(int i = 0; i < array.length/2; i ++){
+            swapElements(array, i, array.length-i-1);
+        }
+        return array;
+    }
+    
+    public static boolean hasConsecutiveDuplicate(int[] array){
+        for(int i = 0; i < array.length-1; i ++){
+            if (array[i] == array[i+1]) return true;
+        }
+        return false;
+    }
 
+    public static int firstNegative(int[] array){
+        for(int i = 0; i < array.length; i ++){
+            if(array[i] < 0) return i;
+        }
+        return -1;
+    }
+
+    public static boolean hasDuplicates(int[] array){
+        for(int i = 0; i < array.length; i ++){
+            for(int j = i+1; j < array.length; j ++){
+                if(array[i] == array[j]) return true;
+            }
+        }
+        return false;
+    }
+
+    public static int longestStreak(int[] array, int num){
+        int maxStreak = 0;
+        int currentStreak = 0;
+        for (int i = 0; i < array.length; i++){
+            if (array[i] == num){
+                currentStreak++;
+                maxStreak = Math.max(maxStreak, currentStreak);
+            }
+            else{
+                currentStreak = 0;
+            }
+        }
+        return maxStreak;
+    }
+
+    public static String lastAlphabetically(String[] array){
+        String last = array[0];
+        for (String str : array){
+            if (str.compareTo(last) > 0){
+                last = str;
+            }
+        }
+        return last;
+    }
+
+    public static boolean hasIdenticalValues(int[] array1, int[] array2){
+        for (int i : array1){
+            for (int j : array2){
+                if (i == j){
+                    return true;
+                }
+            }
+        }
+        return false;
     }
 }
