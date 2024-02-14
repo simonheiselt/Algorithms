@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.Arrays;
 public class Main {
     public static void main(String[] args){
         //Number of digits
@@ -122,5 +124,21 @@ public class Main {
         System.out.println(Algorithm.hasIdenticalValues(intArray13, intArray14));
         System.out.println(Algorithm.hasIdenticalValues(intArray9, intArray1));
         System.out.println(Algorithm.hasIdenticalValues(intArray3, intArray7));
+        ArrayList<Integer> intList1 = new ArrayList<Integer>(Arrays.asList(-1, 0, 1));
+        ArrayList<Integer> intList2 = new ArrayList<Integer>(Arrays.asList(-1, -2, -3));
+        ArrayList<Integer> intList3 = new ArrayList<Integer>(Arrays.asList(0, 0, 0, 0, 0));
+        System.out.println(Algorithm.numOfNegativeValues(intList1));
+        System.out.println(Algorithm.numOfNegativeValues(intList2));
+        System.out.println(Algorithm.numOfNegativeValues(intList3));
+        ArrayList<String> stringList1 = new ArrayList<String>(Arrays.asList("String"));
+        ArrayList<String> stringList2 = new ArrayList<String>(Arrays.asList("String", "string"));
+        System.out.println(Algorithm.isInArray(stringList1, "string"));
+        System.out.println(Algorithm.isInArray(stringList1, "String"));
+        System.out.println(Algorithm.isInArray(stringList2, "string"));
+        ArrayList<Integer> intList4 = new ArrayList<Integer>(Arrays.asList(1, 2));
+        ArrayList<Integer> intList5 = new ArrayList<Integer>(Arrays.asList(2, 3));
+        System.out.println(Algorithm.hasIdenticalValues(intList4, intList5));
+        System.out.println(Algorithm.hasIdenticalValues(intList2, intList3));
+        System.out.println(Algorithm.hasIdenticalValues(intList1, intList2));
     }
 }

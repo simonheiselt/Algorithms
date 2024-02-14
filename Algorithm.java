@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class Algorithm {
     public static int numberOfDigits(int n){
         if(n == 0){
@@ -203,6 +205,24 @@ public class Algorithm {
                 }
             }
         }
+        return false;
+    }
+
+    public static int numOfNegativeValues(ArrayList<Integer> list){
+        int count = 0;
+        for(int i : list){
+            if (i < 0) count++;
+        }
+        return count;
+    }
+
+    public static boolean isInArray(ArrayList<String> list, String str){
+        for(String s : list) if(s.equals(str)) return true;
+        return false;
+    }
+
+    public static boolean hasIdenticalValues(ArrayList<Integer> list1, ArrayList<Integer> list2){
+        for(int i : list1) for(int j : list2) if(i == j) return true;
         return false;
     }
 }
