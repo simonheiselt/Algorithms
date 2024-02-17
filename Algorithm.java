@@ -148,7 +148,7 @@ public class Algorithm {
         }
         return array;
     }
-    
+
     public static boolean hasConsecutiveDuplicate(int[] array){
         for(int i = 0; i < array.length-1; i ++){
             if (array[i] == array[i+1]) return true;
@@ -207,7 +207,147 @@ public class Algorithm {
         }
         return false;
     }
+    
 
+    //7.4
+    public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> list){
+        for(int i = list.size() - 1; i > 0; i--){
+            if(list.get(i) == list.get(i-1)){
+                list.remove(i);
+            }
+        }
+        return list;
+    }
+
+    public static ArrayList<Integer> removeNum(ArrayList<Integer> list, int num){
+        for(int i = list.size() - 1; i >= 0; i--){
+            if(list.get(i) == num){
+                list.remove(i);
+            }
+        }
+        return list;
+    }
+
+    public static ArrayList<Integer> addInOrder(ArrayList<Integer> list, int num){
+        int index = 0;
+        for(int i = 0; i < list.size(); i++){
+            if(num < list.get(i)){
+                list.add(index, num);
+                break;
+            }
+        }
+        return list;
+    }
+
+    public static boolean areArraysInReverseOrder(ArrayList<Integer> list1, ArrayList<Integer> list2){
+        if(list1.size() != list2.size()){
+            return false;
+        }
+        for(int i = 0; i < list1.size(); i++){
+            if(list1.get(i) != list2.get(list2.size()-1-i)){
+                return false;
+            }
+        }
+        return true;
+    }
+    
+    public static int max(ArrayList<Integer> list){
+        int max = Integer.MIN_VALUE;
+        for(int num : list){
+            if(num > max){
+                max = num;
+            }
+        }
+        return max;
+    }
+
+    public static int min(ArrayList<Integer> list){
+        int min = Integer.MAX_VALUE;
+        for(int num : list){
+            if(num < min){
+                min = num;
+            }
+        }
+        return min;
+    }
+
+    public static String shortestString(ArrayList<String> list){
+        String shortest = list.get(0);
+        for (String str : list){
+            if (str.length() < shortest.length()) shortest = str;
+        }
+        return shortest;
+    }
+    
+    public static String longestString(ArrayList<String> list){
+        String longest = list.get(0);
+        for (String str : list){
+            if (str.length() > longest.length()) longest = str;
+        }
+        return longest;
+    }
+    
+    public static int largestAbsoluteDifference(ArrayList<Integer> list1, ArrayList<Integer> list2){
+        int maxDifference = 0;
+        for (int i = 0; i < Math.min(list1.size(), list2.size()); i++) {
+            int difference = Math.abs(list1.get(i) - list2.get(i));
+            if (difference > maxDifference) {
+                maxDifference = difference;
+            }
+        }
+        return maxDifference;
+    }
+
+    public static double calculateMean(ArrayList<Double> list) {
+        if(list.isEmpty()) {
+            return 0;
+        }
+        double sum = 0;
+        for(double num : list) {
+            sum += num;
+        }
+        return sum / list.size();
+    }
+    
+    public static ArrayList<Integer> reverseList(ArrayList<Integer> list){
+        for(int i = 0; i < list.size()/2; i++){
+            int temp = list.get(i);
+            list.set(i, list.get(list.size()-1-i));
+            list.set(list.size()-1-i, temp);
+        }
+        return list;
+    }
+    
+    public static boolean hasConsecutiveDuplicate(ArrayList<Integer> list){
+        for(int i = 0; i < list.size()-1; i++){
+            if(list.get(i) == list.get(i+1)){
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public static int firstNegative(ArrayList<Integer> list){
+        for(int i = 0; i < list.size(); i++){
+            if(list.get(i) < 0){
+                return i;
+            }
+        }
+        return -1;
+    }
+
+    public static boolean hasDuplicateValues(ArrayList<Integer> list){
+        for(int i = 0; i < list.size(); i++){
+            for(int j = i+1; j < list.size(); j++){
+                if(list.get(i) == list.get(j)){
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    //7.5
     public static int numOfNegativeValues(ArrayList<Integer> list){
         int count = 0;
         for(int i : list){
