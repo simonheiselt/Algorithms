@@ -124,9 +124,83 @@ public class Main {
         System.out.println(Algorithm.hasIdenticalValues(intArray13, intArray14));
         System.out.println(Algorithm.hasIdenticalValues(intArray9, intArray1));
         System.out.println(Algorithm.hasIdenticalValues(intArray3, intArray7));
+        //7.4
         ArrayList<Integer> intList1 = new ArrayList<Integer>(Arrays.asList(-1, 0, 1));
         ArrayList<Integer> intList2 = new ArrayList<Integer>(Arrays.asList(-1, -2, -3));
         ArrayList<Integer> intList3 = new ArrayList<Integer>(Arrays.asList(0, 0, 0, 0, 0));
+        ArrayList<Integer> intList6 = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 3, 3));
+        System.out.println(Algorithm.removeDuplicates(intList6));
+        System.out.println(Algorithm.removeDuplicates(intList1));
+        System.out.println(Algorithm.removeDuplicates(intList3));
+        
+        intList6 = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 3, 3));
+        System.out.println(Algorithm.removeNum(intList6, 2));
+        System.out.println(Algorithm.removeNum(intList1, -1));
+        System.out.println(Algorithm.removeNum(intList3, 0));
+        
+        intList6 = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 3, 3));
+        System.out.println(Algorithm.addInOrder(intList6, 4));
+        ArrayList<Integer> intList7 = new ArrayList<Integer>(Arrays.asList(0, 4, 5, 6));
+        System.out.println(Algorithm.addInOrder(intList7, 3));
+        System.out.println(Algorithm.addInOrder(intList7, 7));
+
+        ArrayList<Integer> intList8 = new ArrayList<Integer>(Arrays.asList(1, 2, 3));
+        ArrayList<Integer> intList9 = new ArrayList<Integer>(Arrays.asList(3, 2, 1));
+        System.out.println(Algorithm.areArraysInReverseOrder(intList8, intList9));
+        System.out.println(Algorithm.areArraysInReverseOrder(intList3, intList3));
+        System.out.println(Algorithm.areArraysInReverseOrder(intList8, intList8));
+
+        System.out.println(Algorithm.max(intList9));
+        System.out.println(Algorithm.max(intList7));
+        System.out.println(Algorithm.max(intList8));
+
+        System.out.println(Algorithm.min(intList9));
+        System.out.println(Algorithm.min(intList7));
+        System.out.println(Algorithm.min(intList8));
+
+        ArrayList<String> stringList3 = new ArrayList<String>(Arrays.asList("Hello,", "world", "!"));
+        ArrayList<String> stringList4 = new ArrayList<String>(Arrays.asList("", "asldkfjdlkjf", "!"));
+        ArrayList<String> stringList5 = new ArrayList<String>(Arrays.asList("ajdlk,", "are", "sdfdsafdsafdasfdsfd"));
+        System.out.println(Algorithm.shortestString(stringList3));
+        System.out.println(Algorithm.shortestString(stringList4));
+        System.out.println(Algorithm.shortestString(stringList5));
+        System.out.println(Algorithm.longestString(stringList3));
+        System.out.println(Algorithm.longestString(stringList4));
+        System.out.println(Algorithm.longestString(stringList5));
+
+        ArrayList<Integer> intList10 = new ArrayList<Integer>(Arrays.asList(2, 3, 4));
+        ArrayList<Integer> intList11 = new ArrayList<Integer>(Arrays.asList(-1, -2, -3));
+        System.out.println(Algorithm.largestAbsoluteDifference(intList10, intList11));
+        System.out.println(Algorithm.largestAbsoluteDifference(intList6, intList11));
+        System.out.println(Algorithm.largestAbsoluteDifference(intList1, intList11));
+
+        ArrayList<Double> doubleList1 = new ArrayList<Double>(Arrays.asList(1.5, 3.5, 5.5));
+        ArrayList<Double> doubleList2 = new ArrayList<Double>(Arrays.asList(-1000.0, 3.5, 5.5));
+        ArrayList<Double> doubleList3 = new ArrayList<Double>(Arrays.asList(1.5, 30.6, 5.5));
+        System.out.println(Algorithm.calculateMean(doubleList1));
+        System.out.println(Algorithm.calculateMean(doubleList2));
+        System.out.println(Algorithm.calculateMean(doubleList3));
+
+        System.out.println(Algorithm.reverseList(intList8));
+        System.out.println(Algorithm.reverseList(intList9));
+        System.out.println(Algorithm.reverseList(intList10));
+
+        ArrayList<Integer> intList12 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 3, 4));
+        System.out.println(Algorithm.hasConsecutiveDuplicate(intList12));
+        System.out.println(Algorithm.hasConsecutiveDuplicate(intList1));
+        System.out.println(Algorithm.hasConsecutiveDuplicate(intList3));
+
+        ArrayList<Integer> intList13 = new ArrayList<Integer>(Arrays.asList(1, 0, -1));
+        System.out.println(Algorithm.firstNegative(intList13));
+        System.out.println(Algorithm.firstNegative(intList12));
+        System.out.println(Algorithm.firstNegative(intList11));
+
+        ArrayList<Integer> intList14 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 2));
+        System.out.println(Algorithm.hasDuplicates(intList14));
+        System.out.println(Algorithm.hasDuplicates(intList12));
+        System.out.println(Algorithm.hasDuplicates(intList13));
+
+        //7.5
         System.out.println(Algorithm.numOfNegativeValues(intList1));
         System.out.println(Algorithm.numOfNegativeValues(intList2));
         System.out.println(Algorithm.numOfNegativeValues(intList3));
