@@ -196,9 +196,9 @@ public class Main {
         System.out.println(Algorithm.firstNegative(intList11));
 
         ArrayList<Integer> intList14 = new ArrayList<Integer>(Arrays.asList(1, 2, 3, 2));
-        System.out.println(Algorithm.hasDuplicates(intList14));
-        System.out.println(Algorithm.hasDuplicates(intList12));
-        System.out.println(Algorithm.hasDuplicates(intList13));
+        System.out.println(Algorithm.hasDuplicateValues(intList14));
+        System.out.println(Algorithm.hasDuplicateValues(intList12));
+        System.out.println(Algorithm.hasDuplicateValues(intList13));
 
         //7.5
         System.out.println(Algorithm.numOfNegativeValues(intList1));
@@ -214,5 +214,13 @@ public class Main {
         System.out.println(Algorithm.hasIdenticalValues(intList4, intList5));
         System.out.println(Algorithm.hasIdenticalValues(intList2, intList3));
         System.out.println(Algorithm.hasIdenticalValues(intList1, intList2));
+
+        //7.6
+        String[] stringArray5 = {"Zebra", "alpha"};
+        String[] stringArray6 = {"asdfdsg", "gfdsgf", "b"};
+        String[] stringArray7 = {"fsd", "45", "@#$%^^#"};
+        Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray5));
+        Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray6));
+        Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray7));
     }
 }

@@ -83,6 +83,13 @@ public class Algorithm {
         System.out.println();
     }
 
+    public static void printArray(String[] array){
+        for (String element : array){
+            System.out.print(element + " ");
+        }
+        System.out.println();
+    }
+
     public static void swapElements(int[] array, int index1, int index2){
         int temp = array[index1];
         array[index1] = array[index2];
@@ -365,4 +372,32 @@ public class Algorithm {
         for(int i : list1) for(int j : list2) if(i == j) return true;
         return false;
     }
+
+    //7.6
+    public static void swap(int[] arr, int i, int j){
+        int temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+    public static void swap(String[] arr, int i, int j){
+        String temp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = temp;
+    }
+
+    public static String[] alphabeticSelectionSort(String[] array){
+        int mindex = 0;
+        for(int i = 0; i < array.length; i ++){
+            for(int j = i+1; j < array.length; j++){
+                if (array[j].toLowerCase().compareTo(array[mindex].toLowerCase()) > 0) {
+                    mindex = j;
+                }
+            }
+            if(mindex!=i){
+                swap(array, i, mindex);
+            }
+        }
+        return array;
+    }
+
 }
