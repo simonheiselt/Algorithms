@@ -216,17 +216,41 @@ public class Main {
         System.out.println(Algorithm.hasIdenticalValues(intList1, intList2));
 
         //7.6
-        String[] stringArray5 = {"Zebra", "alpha"};
+        String[] stringArray5 = {"zebra", "alpha"};
         String[] stringArray6 = {"asdfdsg", "Gfdsgf", "b"};
         String[] stringArray7 = {"fsd", "45", "@#$%^^#"};
         Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray5));
         Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray6));
         Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray7));
-        String[] stringArray8 = {"Zebra", "alpha"};
+        String[] stringArray8 = {"zebra", "alpha"};
         String[] stringArray9 = {"a", "v", "d", "i", "k", "s", "Z", "w"};
         String[] stringArray10 = {"asdfj", "asdf", "asdfb"};
         Algorithm.printArray(Algorithm.alphabeticInsertionSort(stringArray8));
         Algorithm.printArray(Algorithm.alphabeticInsertionSort(stringArray9));
         Algorithm.printArray(Algorithm.alphabeticInsertionSort(stringArray10));
+        ArrayList<String> stringList6 = new ArrayList<String>(Arrays.asList("zebra", "alpha"));
+        ArrayList<String> stringList7 = new ArrayList<String>(Arrays.asList("String", "strinf"));
+        ArrayList<String> stringList8 = new ArrayList<String>(Arrays.asList("fds", "dng h", "  x", "vvvvvvvvvv"));
+        System.out.println(Algorithm.alphabeticSelectionSort(stringList6));
+        System.out.println(Algorithm.alphabeticSelectionSort(stringList7));
+        System.out.println(Algorithm.alphabeticSelectionSort(stringList8));
+        ArrayList<String> stringList9 = new ArrayList<String>(Arrays.asList("zebra", "alpha"));
+        ArrayList<String> stringList10 = new ArrayList<String>(Arrays.asList("String", "strinf"));
+        ArrayList<String> stringList11 = new ArrayList<String>(Arrays.asList("fds", "dng h", "  x", "vvvvvvvvvv"));
+        System.out.println(Algorithm.alphabeticInsertionSort(stringList9));
+        System.out.println(Algorithm.alphabeticInsertionSort(stringList10));
+        System.out.println(Algorithm.alphabeticInsertionSort(stringList11));
+        ArrayList<Integer> intList15 = new ArrayList<Integer>(Arrays.asList(1, 0, -1));
+        ArrayList<Integer> intList16 = new ArrayList<Integer>(Arrays.asList(5, 8, 2, 4, 3, 2, 1, 6 ,9, 0, 5));
+        ArrayList<Integer> intList17 = new ArrayList<Integer>(Arrays.asList(7, 6, 5, 4, 3, 2, 8));
+        System.out.println(Algorithm.selectionSort(intList15));
+        System.out.println(Algorithm.selectionSort(intList16));
+        System.out.println(Algorithm.selectionSort(intList17));
+        ArrayList<Integer> intList18 = new ArrayList<Integer>(Arrays.asList(1, 0, -1));
+        ArrayList<Integer> intList19 = new ArrayList<Integer>(Arrays.asList(5, 8, 2, 4, 3, 2, 1, 6 ,9, 0, 5));
+        ArrayList<Integer> intList20 = new ArrayList<Integer>(Arrays.asList(7, 6, 5, 4, 3, 2, 8));
+        System.out.println(Algorithm.insertionSort(intList18));
+        System.out.println(Algorithm.insertionSort(intList19));
+        System.out.println(Algorithm.insertionSort(intList20));
     }
 }
