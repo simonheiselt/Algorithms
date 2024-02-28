@@ -132,12 +132,12 @@ public class Main {
         System.out.println(Algorithm.removeDuplicates(intList6));
         System.out.println(Algorithm.removeDuplicates(intList1));
         System.out.println(Algorithm.removeDuplicates(intList3));
-        
+
         intList6 = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 3, 3));
         System.out.println(Algorithm.removeNum(intList6, 2));
         System.out.println(Algorithm.removeNum(intList1, -1));
         System.out.println(Algorithm.removeNum(intList3, 0));
-        
+
         intList6 = new ArrayList<Integer>(Arrays.asList(1, 2, 2, 3, 3));
         System.out.println(Algorithm.addInOrder(intList6, 4));
         ArrayList<Integer> intList7 = new ArrayList<Integer>(Arrays.asList(0, 4, 5, 6));
@@ -217,10 +217,16 @@ public class Main {
 
         //7.6
         String[] stringArray5 = {"Zebra", "alpha"};
-        String[] stringArray6 = {"asdfdsg", "gfdsgf", "b"};
+        String[] stringArray6 = {"asdfdsg", "Gfdsgf", "b"};
         String[] stringArray7 = {"fsd", "45", "@#$%^^#"};
         Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray5));
         Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray6));
         Algorithm.printArray(Algorithm.alphabeticSelectionSort(stringArray7));
+        String[] stringArray8 = {"Zebra", "alpha"};
+        String[] stringArray9 = {"a", "v", "d", "i", "k", "s", "Z", "w"};
+        String[] stringArray10 = {"asdfj", "asdf", "asdfb"};
+        Algorithm.printArray(Algorithm.alphabeticInsertionSort(stringArray8));
+        Algorithm.printArray(Algorithm.alphabeticInsertionSort(stringArray9));
+        Algorithm.printArray(Algorithm.alphabeticInsertionSort(stringArray10));
     }
 }
