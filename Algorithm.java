@@ -214,7 +214,7 @@ public class Algorithm {
         }
         return false;
     }
-    
+
 
     //7.4
     public static ArrayList<Integer> removeDuplicates(ArrayList<Integer> list){
@@ -257,7 +257,7 @@ public class Algorithm {
         }
         return true;
     }
-    
+
     public static int max(ArrayList<Integer> list){
         int max = Integer.MIN_VALUE;
         for(int num : list){
@@ -285,7 +285,7 @@ public class Algorithm {
         }
         return shortest;
     }
-    
+
     public static String longestString(ArrayList<String> list){
         String longest = list.get(0);
         for (String str : list){
@@ -293,7 +293,7 @@ public class Algorithm {
         }
         return longest;
     }
-    
+
     public static int largestAbsoluteDifference(ArrayList<Integer> list1, ArrayList<Integer> list2){
         int maxDifference = 0;
         for (int i = 0; i < Math.min(list1.size(), list2.size()); i++) {
@@ -315,7 +315,7 @@ public class Algorithm {
         }
         return sum / list.size();
     }
-    
+
     public static ArrayList<Integer> reverseList(ArrayList<Integer> list){
         for(int i = 0; i < list.size()/2; i++){
             int temp = list.get(i);
@@ -324,7 +324,7 @@ public class Algorithm {
         }
         return list;
     }
-    
+
     public static boolean hasConsecutiveDuplicate(ArrayList<Integer> list){
         for(int i = 0; i < list.size()-1; i++){
             if(list.get(i) == list.get(i+1)){
@@ -353,7 +353,7 @@ public class Algorithm {
         }
         return false;
     }
-    
+
     //7.5
     public static int numOfNegativeValues(ArrayList<Integer> list){
         int count = 0;
@@ -384,20 +384,36 @@ public class Algorithm {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-
-    public static String[] alphabeticSelectionSort(String[] array){
-        int mindex = 0;
-        for(int i = 0; i < array.length; i ++){
-            for(int j = i+1; j < array.length; j++){
-                if (array[j].toLowerCase().compareTo(array[mindex].toLowerCase()) > 0) {
+    
+    public static String[] alphabeticSelectionSort(String[] array) {
+        for (int i = 0; i < array.length - 1; i++) {
+            int mindex = i;
+            for (int j = i + 1; j < array.length; j++) {
+                if (array[j].compareToIgnoreCase(array[mindex]) < 0) {
                     mindex = j;
                 }
             }
-            if(mindex!=i){
-                swap(array, i, mindex);
+            if (mindex != i) {
+                String temp = array[i];
+                array[i] = array[mindex];
+                array[mindex] = temp;
             }
         }
         return array;
     }
 
+    
+    public static String[] alphabeticInsertionSort(String[] array) {
+        for (int i = 1; i < array.length; i++) {
+            String key = array[i];
+            int j = i - 1;
+
+            while (j >= 0 && array[j].compareToIgnoreCase(key) > 0) {
+                array[j + 1] = array[j];
+                j = j - 1;
+            }
+            array[j + 1] = key;
+        }
+        return array;
+    }
 }
