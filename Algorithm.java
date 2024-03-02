@@ -384,7 +384,7 @@ public class Algorithm {
         arr[i] = arr[j];
         arr[j] = temp;
     }
-    
+
     public static String[] alphabeticSelectionSort(String[] array) {
         for (int i = 0; i < array.length - 1; i++) {
             int mindex = i;
@@ -402,7 +402,7 @@ public class Algorithm {
         return array;
     }
 
-    
+
     public static String[] alphabeticInsertionSort(String[] array) {
         for (int i = 1; i < array.length; i++) {
             String key = array[i];
@@ -477,5 +477,149 @@ public class Algorithm {
             list.set(j+1, key);
         }
         return list;
+    }
+
+    //8.2
+    public static int countElementsContainingString(String[][] array, String str) {
+        int count = 0;
+        for (String[] r : array) {
+            for (String element : subArray) {
+                if (element.contains(str)) {
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+
+    
+    public static boolean isIntIn2DArray(int[][] array, int target) {
+        for (int[] subArray : array) {
+            for (int element : subArray) {
+                if (element == target) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+    
+    public static int[] findIntIn2DArray(int[][] array, int target) {
+        for (int i = 0; i < array.length; i++) {
+            for (int j = 0; j < array[i].length; j++) {
+                if (array[i][j] == target) {
+                    return new int[]{i, j};
+                }
+            }
+        }
+        return new int[]{-1, -1};
+    }
+
+    
+    public static String concatenateColumnStrings(String[][] array, int column) {
+        String concatenatedStr = "";
+        for (String[] row : array) {
+            if (column >= 0 && column < row.length) {
+                concatenatedStr += row[column] + " ";
+            }
+        }
+        return concatenatedStr;
+    }
+
+    public static int maxIn2DArray(int[][] array) {
+        int max = Integer.MIN_VALUE;
+        for (int[] subArray : array) {
+            for (int element : subArray) {
+                if (element > max) {
+                    max = element;
+                }
+            }
+        }
+        return max;
+    }
+    
+    public static int minIn2DArray(int[][] array) {
+        int min = Integer.MAX_VALUE;
+        for (int[] subArray : array) {
+            for (int element : subArray) {
+                if (element < min) {
+                    min = element;
+                }
+            }
+        }
+        return min;
+    }
+    
+    public static String shortestStringIn2DArray(String[][] array){
+        String shortest = array[0][0];
+        for (String[] row : array){
+            for (String str : row){
+                if (str.length() < shortest.length()) shortest = str;
+            }
+        }
+        return shortest;
+    }
+    
+    public static String longestStringIn2DArray(String[][] array){
+        String longest = array[0][0];
+        for (String[] row : array){
+            for (String str : row){
+                if (str.length() > longest.length()) longest = str;
+            }
+        }
+        return longest;
+    }
+
+    public static int largestAbsoluteDifferenceBetween2DArrays(int[][] array1, int[][] array2){
+        int maxDifference = 0;
+        for (int i = 0; i < Math.min(array1.length, array2.length); i++) {
+            for (int j = 0; j < Math.min(array1[i].length, array2[i].length); j++) {
+                int difference = Math.abs(array1[i][j] - array2[i][j]);
+                if (difference > maxDifference) {
+                    maxDifference = difference;
+                }
+            }
+        }
+        return maxDifference;
+    }
+    
+    public static double calculateMean2DArray(double[][] array) {
+        if(array.length == 0 || array[0].length == 0) {
+            return 0;
+        }
+        double sum = 0;
+        for (double[] row : array) {
+            for (double num : row) {
+                sum += num;
+            }
+        }
+        return sum / (array.length * array[0].length);
+    }
+    
+    public static boolean hasIdenticalValuesIn2DArray(int[][] array){
+        for(int i = 0; i < array.length; i++){
+            for(int j = 0; j < array[i].length; j++){
+                for(int x = i; x < array.length; x++){
+                    int y = 0;
+                    if(x == i) y = j + 1;
+                    for(; y < array[x].length; y++){
+                        if(array[i][j] == array[x][y]) return true;
+                    }
+                }
+            }
+        }
+        return false;
+    }
+
+    public static String lastAlphabeticallyIgnoreCase(String[][] array) {
+        String last = array[0][0];
+        for (String[] row : array) {
+            for (String str : row) {
+                if (str.compareToIgnoreCase(last) > 0) {
+                    last = str;
+                }
+            }
+        }
+        return last;
     }
 }
