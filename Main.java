@@ -252,5 +252,22 @@ public class Main {
         System.out.println(Algorithm.insertionSort(intList18));
         System.out.println(Algorithm.insertionSort(intList19));
         System.out.println(Algorithm.insertionSort(intList20));
+
+        //8.2
+        System.out.println(Algorithm.countElementsContainingString(new String[][]{{"Hello,", "world", "!"}, {"It's", "me", "Genevieve"}}, "e"));
+        System.out.println(Algorithm.countElementsContainingString(new String[][]{{"Hello,", "world", "!"}, {"It's", "me", "Genevieve"}}, "Gen"));
+        System.out.println(Algorithm.countElementsContainingString(new String[][]{{"Hello,", "world", "!"}, {"It's", "me", "Genevieve"}}, "hello"));
+
+        System.out.println(Algorithm.isIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 5));
+        System.out.println(Algorithm.isIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 3));
+        System.out.println(Algorithm.isIntIn2DArray(new int[][]{{1, 2},{2, 2}}, 2));
+
+        System.out.println(Algorithm.findIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 3));
+        System.out.println(Algorithm.findIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 5));
+        System.out.println(Algorithm.findIntIn2DArray(new int[][]{{1, 1},{3, 4}}, 1));
+
+        Algorithm.printArray(Algorithm.getDiagonalElements(new int[][]{{1, 2},{3, 4}}));
+        Algorithm.printArray(Algorithm.getDiagonalElements(new int[][]{{1, 2, 3},{3, 4, 36}}));
+        Algorithm.printArray(Algorithm.getDiagonalElements(new int[][]{{0}}));
     }
 }
