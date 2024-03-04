@@ -482,7 +482,7 @@ public class Algorithm {
     //8.2
     public static int countElementsContainingString(String[][] array, String str) {
         int count = 0;
-        for (String[] r : array) {
+        for (String[] subArray : array) {
             for (String element : subArray) {
                 if (element.contains(str)) {
                     count++;
@@ -515,6 +515,13 @@ public class Algorithm {
         return new int[]{-1, -1};
     }
 
+    public static int[] getDiagonalElements(int[][] array){
+        int[] newArr = new int[Math.min(array.length, array[0].length)];
+        for(int i = 0; i < Math.min(array.length, array[0].length); i++){
+            newArr[i] = array[i][i];
+        }
+        return newArr;
+    }
     
     public static String concatenateColumnStrings(String[][] array, int column) {
         String concatenatedStr = "";
@@ -611,7 +618,7 @@ public class Algorithm {
         return false;
     }
 
-    public static String lastAlphabeticallyIgnoreCase(String[][] array) {
+    public static String lastAlphabetically(String[][] array) {
         String last = array[0][0];
         for (String[] row : array) {
             for (String str : row) {

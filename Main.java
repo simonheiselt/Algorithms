@@ -262,12 +262,48 @@ public class Main {
         System.out.println(Algorithm.isIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 3));
         System.out.println(Algorithm.isIntIn2DArray(new int[][]{{1, 2},{2, 2}}, 2));
 
-        System.out.println(Algorithm.findIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 3));
-        System.out.println(Algorithm.findIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 5));
-        System.out.println(Algorithm.findIntIn2DArray(new int[][]{{1, 1},{3, 4}}, 1));
+        Algorithm.printArray(Algorithm.findIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 3));
+        Algorithm.printArray(Algorithm.findIntIn2DArray(new int[][]{{1, 2},{3, 4}}, 5));
+        Algorithm.printArray(Algorithm.findIntIn2DArray(new int[][]{{1, 1},{3, 4}}, 1));
 
         Algorithm.printArray(Algorithm.getDiagonalElements(new int[][]{{1, 2},{3, 4}}));
         Algorithm.printArray(Algorithm.getDiagonalElements(new int[][]{{1, 2, 3},{3, 4, 36}}));
         Algorithm.printArray(Algorithm.getDiagonalElements(new int[][]{{0}}));
+
+        System.out.println(Algorithm.concatenateColumnStrings(new String[][]{{"Hello,", "world", "!"}, {"It's", "me", "Margaret"}}, 1));
+        System.out.println(Algorithm.concatenateColumnStrings(new String[][]{{"Hello,", "world", "!"}, {"It's", "me", "Margaret"}}, 2));
+        System.out.println(Algorithm.concatenateColumnStrings(new String[][]{{" "}, {"It's", "me", "Margaret"}}, 0));
+
+        System.out.println(Algorithm.maxIn2DArray(new int[][]{{3, 2, 1}, {4, 5, 6}}));
+        System.out.println(Algorithm.maxIn2DArray(new int[][]{{3, 2, 1}, {4, 5, 8}}));
+        System.out.println(Algorithm.maxIn2DArray(new int[][]{{-500}}));
+
+        System.out.println(Algorithm.minIn2DArray(new int[][]{{3, 2, 1}, {4, 5, 6}}));
+        System.out.println(Algorithm.minIn2DArray(new int[][]{{3, 2, -5}, {4, 5, 6}}));
+        System.out.println(Algorithm.minIn2DArray(new int[][]{{300, 2, 1}, {4, 5, 6}}));
+
+        System.out.println(Algorithm.shortestStringIn2DArray(new String[][]{{"Hello,", "world", "!"}, {"It's", "me", "Margaret"}}));
+        System.out.println(Algorithm.shortestStringIn2DArray(new String[][]{{"Hello,", "world", "!!!"}, {"It", "me", "Margaret"}}));
+        System.out.println(Algorithm.shortestStringIn2DArray(new String[][]{{"Hello", "world", "!!!!!"}, {"Itt's", "meeee", "Margo"}}));
+
+        System.out.println(Algorithm.longestStringIn2DArray(new String[][]{{"Hello,", "world", "!"}, {"It's", "me", "Margaret"}}));
+        System.out.println(Algorithm.longestStringIn2DArray(new String[][]{{"Helloooo,", "world", "!!!"}, {"It", "me", "Margaret"}}));
+        System.out.println(Algorithm.longestStringIn2DArray(new String[][]{{"Hello", "world", "!!!!!"}, {"Itt's", "meeee", "Margo"}}));
+
+        System.out.println(Algorithm.largestAbsoluteDifferenceBetween2DArrays(new int[][]{{2, 3, 4}, {-1, -2, -3}}, new int[][]{{1, 2, 3}, {4, 5, 6}}));
+        System.out.println(Algorithm.largestAbsoluteDifferenceBetween2DArrays(new int[][]{{2, 3, 4}, {-5, -2, -3}}, new int[][]{{1, 2, 3}, {4, 5, 6}}));
+        System.out.println(Algorithm.largestAbsoluteDifferenceBetween2DArrays(new int[][]{{333, 3, 4}, {-1, -2, -3}}, new int[][]{{1, 2, 3}, {4, 5, 6}}));
+
+        System.out.println(Algorithm.calculateMean2DArray(new double[][]{{1.6, 3.2, 5.4}, {6.3, 4.1, 2.5}}));
+        System.out.println(Algorithm.calculateMean2DArray(new double[][]{{3.0}}));
+        System.out.println(Algorithm.calculateMean2DArray(new double[][]{{1.6, 3.2, 5.4}, {6.3, 44444444.1, 2.5}}));
+
+        System.out.println(Algorithm.hasIdenticalValuesIn2DArray(new int[][]{{1, 2}, {3, 2}}));
+        System.out.println(Algorithm.hasIdenticalValuesIn2DArray(new int[][]{{1, 2}, {3, 4}}));
+        System.out.println(Algorithm.hasIdenticalValuesIn2DArray(new int[][]{{1, 1}, {3, 2}}));
+
+        System.out.println(Algorithm.lastAlphabetically(new String[][]{{"bravo", "charlie"}, {"zebra", "alpha"}}));
+        System.out.println(Algorithm.lastAlphabetically(new String[][]{{"bravo", "charlie"}, {"!%$!%!@", "alpha"}}));
+        System.out.println(Algorithm.lastAlphabetically(new String[][]{{"bravo", "5233235"}, {"zebra", "!$#$^&&^%"}}));
     }
 }
